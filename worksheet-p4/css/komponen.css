@@ -1,0 +1,117 @@
+/* Form & Kontrol */
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+legend {
+  font-weight: bold;
+  padding-inline: var(--space-2);
+}
+
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+input, textarea {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+button {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  cursor: pointer;
+  align-self: flex-start;
+  font-weight: 600;
+}
+
+/* Keadaan Fokus & Validasi */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+input:user-invalid, textarea:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+#nim-bantuan {
+  font-size: var(--text-sm);
+  color: var(--color-fg);
+  opacity: 0.8;
+}
+
+/* Tabel Data */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-3);
+  background: var(--color-surface);
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: var(--space-2);
+}
+
+th, td {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+/* Komponen Tambahan Semantik */
+details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  background: var(--color-surface);
+  margin-top: var(--space-2);
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ol.lini {
+  padding-left: var(--space-4);
+}
+
+ol.lini li {
+  margin-bottom: var(--space-2);
+}
+
+dl.keterampilan dt {
+  font-weight: bold;
+  margin-top: var(--space-2);
+}
+
+dl.keterampilan dd {
+  margin-left: var(--space-3);
+  color: var(--color-fg);
+}
