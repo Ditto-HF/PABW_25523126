@@ -67,7 +67,7 @@
       <!-- ISI 5 — dua sampai tiga kalimat: asal, minat, dan hal yang
            sedang Anda pelajari. -->
       <p>Saya mahasiswa Program Studi Informatika Universitas Islam Indonesia.
-         Saya dari Sleman,Yogyakarta, Saya tertarik pada pengembangan web, khususnya bagian tampilan,
+         Saya dari Sleman,Yogyakarta, Saya tertarik pada penerapan TI di bidang kesehatan, saya mempelajari pengembangan web, khususnya bagian tampilan,
          karena di sana keputusan teknis langsung terlihat hasilnya.</p>
 
       <table>
@@ -106,8 +106,8 @@
            Boleh tugas kuliah, karya pribadi, atau hobi. -->
       <ul>
         <li>Halaman Kelas Terbuka Kampus — praktikum P03, HTML semantik dan form.</li>
-        <li>Karya kedua Anda — sebutkan apa dan tahunnya.</li>
-        <li>Karya ketiga Anda — sebutkan apa dan tahunnya.</li>
+        <li>WarMis — Sistem inventori untuk warmindo semester 2 2026.</li>
+        <li>Stress Shield — Design ui/ux aplikasi kesehatan mental semester 1 2025.</li>
       </ul>
     </section>
 
@@ -136,7 +136,7 @@
             <!-- ISI 8 — ganti angka di dalam pattern dengan NIM Anda sendiri. -->
             <input id="nim" name="nim" type="text" inputmode="numeric"
                    pattern="[0-9]{8}" aria-describedby="nim-bantuan" required>
-            <span id="nim-bantuan">Delapan digit angka, contoh 105230102.</span>
+            <span id="nim-bantuan">Delapan digit angka, contoh 25523126.</span>
           </p>
 
           <p>
@@ -154,11 +154,53 @@
          yang belum terpakai, elemen semantik yang berbeda satu sama lain, dan
          gaya memakai token yang sama. Tiga section di atas JANGAN diubah. -->
 
+    <!-- Bagian 1: FAQ menggunakan <details> & <summary> -->
+    <section id="tanya-jawab">
+      <h2>Tanya jawab (FAQ)</h2>
+      <details>
+        <summary>Apa fokus utama studi yang sedang Anda jalani?</summary>
+        <p>Saya berfokus pada arsitektur CSS modern, aksesibilitas web (WCAG), dan pengoptimalan antarmuka pengguna.</p>
+      </details>
+      <details>
+        <summary>Perkakas apa yang Anda gunakan untuk pengembangan web?</summary>
+        <p>Saya menggunakan VS Code untuk penulisan kode, Git untuk kontrol versi.</p>
+      </details>
+    </section>
+
+    <!-- Bagian 2: Lini Masa menggunakan <ol> & <time> -->
+    <section id="lini-masa">
+      <h2>Perjalanan akademik</h2>
+      <ol class="lini">
+        <li>
+          <time datetime="2024-08">Agustus 2024</time> — Resmi menjadi mahasiswa Informatika UII.
+        </li>
+        <li>
+          <time datetime="2025-02">Februari 2025</time> — Menyelesaikan proyek dasar pemrograman dan struktur data.
+        </li>
+        <li>
+          <time datetime="2026-09">September 2026</time> — Mengimplementasikan arsitektur Design Token pada mata kuliah PABW.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Bagian 3: Keterampilan menggunakan <dl>, <dt>, & <dd> -->
+    <section id="keterampilan">
+      <h2>Keterampilan dasar</h2>
+      <dl class="keterampilan">
+        <dt>Dasar HTML</dt>
+        <dd>Membuat struktur halaman web, tabel data, dan formulir input sederhana.</dd>
+        <dt>Dasar CSS</dt>
+        <dd>Mengatur warna, font, dan tata letak tampilan web menggunakan Flexbox.</dd>
+        <dt>Perkakas Belajar</dt>
+        <dd>Menggunakan VS Code untuk menulis kode dan Git dasar untuk menyimpan tugas kuliah.</dd>
+      </dl>
+    </section>
+
   </main>
 
   <footer class="kaki">
     <!-- ISI 9 — nama, NIM, tahun. -->
-    <p>Nama Anda · 105230102 · <time datetime="2026">2026</time></p>
+    <p>Adnan Hanif Riandito · 25523126 · <time datetime="2026">2026</time></p>
   </footer>
 </body>
 </html>
