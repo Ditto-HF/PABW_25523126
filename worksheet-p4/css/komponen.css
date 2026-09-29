@@ -12,7 +12,7 @@ legend {
   font-weight: bold;
   padding-inline: var(--space-2);
 }
-
+/* KOLOM ISIAN DAN TOMBOL */
 .form-kolom {
   display: flex;
   flex-direction: column;
@@ -44,10 +44,9 @@ button {
   color: var(--color-surface);
   cursor: pointer;
   align-self: flex-start;
-  font-weight: 600;
 }
 
-/* Keadaan Fokus & Validasi */
+/* Keadaan Fokus & Isian Tidak Sah */
 :focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
@@ -57,6 +56,10 @@ input:user-invalid, textarea:user-invalid {
   border-color: var(--color-danger);
   border-width: 2px;
 }
+
+.pesan-galat       { display: none; color: var(--color-danger); font-size: var(--text-sm); }
+.form-kolom:has(input:user-invalid) .pesan-galat { display: block; }
+
 
 #nim-bantuan {
   font-size: var(--text-sm);

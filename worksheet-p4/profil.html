@@ -37,10 +37,16 @@
   <a class="lewati" href="#utama">Lewati ke konten utama</a>
 
   <header class="kepala">
+    <!-- taruh di dalam <header>, sebelum judul -->
+    <input type="checkbox" id="tema" class="pengalih-tema">
+    <label for="tema" class="tombol-tema">Tema gelap</label>
+
     <!-- ISI 2 — nama Anda, atau nama panggilan yang Anda pakai. -->
-    <h1>Adnan Hanif Riandito</h1>
-    <!-- ISI 3 — satu kalimat tentang diri Anda. -->
-    <p class="tagline">Mahasiswa Informatika yang sedang belajar membangun web.</p>
+    <div class="header-baris">
+      <div>
+        <h1>Adnan Hanif Riandito</h1>
+        <p class="tagline">Mahasiswa Informatika yang sedang belajar membangun web.</p>
+    </div>
     <nav aria-label="Navigasi utama">
       <ul>
         <li><a href="#tentang">Tentang</a></li>
@@ -59,7 +65,7 @@
         <!-- ISI 4 — pakai foto Anda sendiri dengan nama berkas yang sama,
              atau biarkan berkas contoh apa adanya. -->
         <img src="media/foto-profil.jpg"
-             alt="Foto diri Nama Anda memakai kemeja putih."
+             alt="Foto diri Adnan Hanif Riandito memakai kemeja hitam."
              width="480" height="480" loading="lazy">
         <figcaption>Foto profil.</figcaption>
       </figure>
@@ -92,7 +98,7 @@
             <td><time datetime="2026-10">Oktober 2026</time></td>
           </tr>
           <tr>
-            <th scope="row">Organisasi kemahasiswaan</th>
+            <th scope="row">Manajemen Proyek Teknologi Informasi</th>
             <td>Anggota</td>
             <td><time datetime="2026">2026</time></td>
           </tr>

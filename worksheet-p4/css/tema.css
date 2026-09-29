@@ -12,29 +12,34 @@
   background: var(--color-surface);
   cursor: pointer;
   font-size: var(--text-sm);
+  color: var(--color-fg);
 }
 
-/* 1. Tema Gelap Otomatis Sistem */
+/* Ikut pengaturan sistem: lapis semantik saja yang diganti */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg:      var(--navy-900);
-    --color-fg:      var(--gray-100);
-    --color-surface: var(--navy-800);
-    --color-border:  var(--gray-700);
-    --color-primary: var(--blue-300);
-    --color-danger:  var(--red-300);
-    --color-focus:   #FFC000;
-    --shadow-1:      0 1px 3px rgba(0, 0, 0, 0.45);
+    --color-bg:         var(--gray-900);
+    --color-fg:         var(--slate-200);
+    --color-surface:    var(--navy-700);
+    --color-border:     var(--slate-500);
+    --color-primary:    var(--teal-400);
+    --color-on-primary: var(--navy-900); /* Teks di atas warna primary terang */
+    --color-danger:     var(--rose-400);
+    --color-focus:      var(--amber-400);
+    --shadow-1:         0 1px 3px rgba(0, 0, 0, .45);
   }
 }
 
+
 /* 2. Overide Manual Lewat Tombol Checkbox (Wajib Ditulis Sesudah Media Query) */
 :root:has(#tema:checked) {
-  --color-bg:      var(--navy-900);
-  --color-fg:      var(--gray-100);
-  --color-surface: var(--navy-800);
-  --color-border:  var(--gray-700);
-  --color-primary: var(--blue-300);
-  --color-danger:  var(--red-300);
-  --color-focus:   #FFC000;
-}
+    --color-bg:         var(--gray-900);
+    --color-fg:         var(--slate-200);
+    --color-surface:    var(--navy-700);
+    --color-border:     var(--slate-500);
+    --color-primary:    var(--teal-400);
+    --color-on-primary: var(--navy-900); /* Teks di atas warna primary terang */
+    --color-danger:     var(--rose-400);
+    --color-focus:      var(--amber-400);
+    --shadow-1:         0 1px 3px rgba(0, 0, 0, .45);
+  }

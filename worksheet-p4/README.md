@@ -52,26 +52,3 @@ Folder `worksheet-p4/` di dalam repositori GitHub Anda sendiri, berisi
 `profil.html`, `css/`, `media/`, dan `bukti/`. Sudah di-commit dan di-push
 sebelum **pukul 23.59 hari yang sama**. Tidak ada perpanjangan.
 
-# PABW_25523126
-pembelajaran semester 3
-
-## Design token halaman profil
-
-- Berkas gaya yang akan dibuat: `tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`
-- Warna utama: `#3B72AF` (biru pastel), dipilih karena memberikan visual yang lembut, tenang, dan ramah pengguna, serta telah memenuhi standar kontras WCAG AA (5.0:1) untuk menjaga tingkat aksesibilitas dan kenyamanan membaca.
-
-### Token yang saya tetapkan
-
-| Token | Nilai | Untuk apa |
-|---|---|---|
-| `--color-primary` | `#3B72AF` | tombol, tautan, penanda |
-| `--color-fg` | `#2A2438` | warna teks utama |
-| `--color-bg` | `#F3F8F5` | latar halaman |
-| `--radius-md` | `0.75rem` | sudut tombol dan kartu |
-| `--space-4` | `1rem` | jarak standar antar elemen |
-
-Kriteria selesai saya: mengubah `--color-primary` di satu baris harus mengubah warna tombol, tautan, judul, dan garis fokus.
-
-### Catatan Penggunaan Ai
-
-pemakaian ai untuk mencari kode warna, kesalahan ketik dan error handling
