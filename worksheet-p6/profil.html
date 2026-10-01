@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--
+  KERANGKA PROFIL — PABW 2026/2027 — Pertemuan 4
+  ==================================================================
+  Berkas ini SUDAH LENGKAP dan sudah lolos W3C Nu Html Checker serta
+  Lighthouse Accessibility. JANGAN mengubah struktur, landmark, label,
+  atau alt untuk memperbaiki tampilan — tampilan diubah dari berkas CSS.
+
+  Tugas Anda di Pertemuan 4:
+    1. Ganti isi yang ditandai  [ISI]  dengan milik Anda sendiri.
+    2. Buat lima berkas CSS di folder css/ lalu buka komentar
+       lima baris <link> di bawah  (lihat Lembar D).
+    3. WAJIB — tambahkan MINIMAL TIGA bagian baru di dalam <main>,
+       masing-masing memakai elemen semantik yang belum terpakai dan
+       berbeda satu sama lain  (lihat Lembar B.3). Setiap bagian wajib
+       diberi gaya memakai token yang sama, lalu dievaluasi W3C dan WCAG.
+-->
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <!-- ISI 1 — judul tab dan hasil pencarian. Ganti dengan nama Anda. -->
+  <title>Profil Adnan Hanif Riandito — PABW 2026/2027</title>
+  <meta name="description" content="Halaman profil mahasiswa PABW: tentang saya, karya, dan kontak.">
+
+  <!-- LEMBAR D — buat lima berkas di folder css/, lalu buka komentar ini.
+       URUTAN PEMUATAN MENENTUKAN CASCADE: tokens, base, layout, komponen, tema.
+       Lapisan paling bawah menang tanpa perlu !important. -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/komponen.css">
+  <link rel="stylesheet" href="css/tema.css">
+</head>
+<body>
+
+  <div class="page">
+    <a class="lewati" href="#utama">Lewati ke konten utama</a>
+
+    <header class="kepala">
+      <!-- taruh di dalam <header>, sebelum judul -->
+      <input type="checkbox" id="tema" class="pengalih-tema">
+      <label for="tema" class="tombol-tema">Tema gelap</label>
+
+      <!-- ISI 2 — nama Anda, atau nama panggilan yang Anda pakai. -->
+      <div class="header-baris">
+        <div>
+          <h1>Adnan Hanif Riandito</h1>
+          <p class="tagline">Mahasiswa Informatika yang sedang belajar membangun web.</p>
+      </div>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#karya">Karya</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+
+    <main id="utama">
+
+      <section id="tentang">
+        <h2>Tentang saya</h2>
+
+        <figure class="foto">
+          <!-- ISI 4 — pakai foto Anda sendiri dengan nama berkas yang sama,
+              atau biarkan berkas contoh apa adanya. -->
+          <img src="media/foto-profil.jpg"
+              alt="Foto diri Adnan Hanif Riandito memakai kemeja hitam."
+              width="480" height="480" loading="lazy">
+          <figcaption>Foto profil.</figcaption>
+        </figure>
+
+        <!-- ISI 5 — dua sampai tiga kalimat: asal, minat, dan hal yang
+            sedang Anda pelajari. -->
+        <p>Saya mahasiswa Program Studi Informatika Universitas Islam Indonesia.
+          Saya dari Sleman,Yogyakarta, Saya tertarik pada penerapan TI di bidang kesehatan, saya mempelajari pengembangan web, khususnya bagian tampilan,
+          karena di sana keputusan teknis langsung terlihat hasilnya.</p>
+
+        <table>
+          <!-- ISI 6 — judul tabel dan isi minimal tiga baris. -->
+          <caption>Kegiatan yang saya ikuti semester ini</caption>
+          <thead>
+            <tr>
+              <th scope="col">Kegiatan</th>
+              <th scope="col">Peran</th>
+              <th scope="col">Waktu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Praktikum PABW</th>
+              <td>Peserta</td>
+              <td><time datetime="2026-09">September 2026</time></td>
+            </tr>
+            <tr>
+              <th scope="row">Kelas Terbuka Kampus</th>
+              <td>Peserta</td>
+              <td><time datetime="2026-10">Oktober 2026</time></td>
+            </tr>
+            <tr>
+              <th scope="row">Manajemen Proyek Teknologi Informasi</th>
+              <td>Anggota</td>
+              <td><time datetime="2026">2026</time></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="karya">
+        <h2>Karya saya</h2>
+        <div class="galeri">
+          <article class="kartu sorotan">
+            <div class="kartu__isi">
+              <h3 class="kartu__judul">Halaman Kelas Terbuka Kampus</h3>
+              <p>Praktikum P03, HTML semantik dan form.</p>
+            </div>
+          </article>
+          <article class="kartu">
+            <div class="kartu__isi">
+              <h3 class="kartu__judul">WarMis</h3>
+              <p>Sistem inventori untuk warmindo semester 2 2026.</p>
+            </div>
+          </article>
+          <article class="kartu">
+            <div class="kartu__isi">
+              <h3 class="kartu__judul">Stress Shield</h3>
+              <p>Design UI/UX aplikasi kesehatan mental semester 1 2025.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="kontak">
+        <h2>Hubungi saya</h2>
+        <p>Isi formulir berikut. Semua kolom bertanda wajib harus diisi.</p>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Data pengirim</legend>
+
+            <p>
+              <label for="nama">Nama lengkap</label>
+              <input id="nama" name="nama" type="text"
+                    autocomplete="name" required>
+            </p>
+
+            <p>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email"
+                    autocomplete="email" required>
+            </p>
+
+            <p>
+              <label for="nim">NIM</label>
+              <!-- ISI 8 — ganti angka di dalam pattern dengan NIM Anda sendiri. -->
+              <input id="nim" name="nim" type="text" inputmode="numeric"
+                    pattern="[0-9]{8}" aria-describedby="nim-bantuan" required>
+              <span id="nim-bantuan">Delapan digit angka, contoh 25523126.</span>
+            </p>
+
+            <p>
+              <label for="pesan">Pesan</label>
+              <textarea id="pesan" name="pesan" rows="4" required></textarea>
+            </p>
+
+            <button type="submit">Kirim</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- STRUKTUR TAMBAHAN (Lembar B.3) — minimal tiga bagian baru di sini,
+          sebelum tag penutup </main>. Wajib: satu <h2> per bagian, atribut id
+          yang belum terpakai, elemen semantik yang berbeda satu sama lain, dan
+          gaya memakai token yang sama. Tiga section di atas JANGAN diubah. -->
+
+      <!-- Bagian 1: FAQ menggunakan <details> & <summary> -->
+      <section id="tanya-jawab">
+        <h2>Tanya jawab (FAQ)</h2>
+        <details>
+          <summary>Apa fokus utama studi yang sedang Anda jalani?</summary>
+          <p>Saya berfokus pada arsitektur CSS modern, aksesibilitas web (WCAG), dan pengoptimalan antarmuka pengguna.</p>
+        </details>
+        <details>
+          <summary>Perkakas apa yang Anda gunakan untuk pengembangan web?</summary>
+          <p>Saya menggunakan VS Code untuk penulisan kode, Git untuk kontrol versi.</p>
+        </details>
+      </section>
+
+      <!-- Bagian 2: Lini Masa menggunakan <ol> & <time> -->
+    <section id="lini-masa">
+      <h2>Perjalanan akademik</h2>
+      <ol class="lini galeri">
+        <li class="kartu">
+          <div class="kartu__isi">
+            <h3 class="kartu__judul"><time datetime="2024-08">Agustus 2024</time></h3>
+            <p>Resmi menjadi mahasiswa Informatika UII.</p>
+          </div>
+        </li>
+        <li class="kartu">
+          <div class="kartu__isi">
+            <h3 class="kartu__judul"><time datetime="2025-02">Februari 2025</time></h3>
+            <p>Menyelesaikan proyek dasar pemrograman dan struktur data.</p>
+          </div>
+        </li>
+        <li class="kartu">
+          <div class="kartu__isi">
+            <h3 class="kartu__judul"><time datetime="2026-09">September 2026</time></h3>
+            <p>Mengimplementasikan arsitektur Design Token pada mata kuliah PABW.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+      <!-- Bagian 3: Keterampilan menggunakan <dl>, <dt>, & <dd> -->
+    <section id="keterampilan">
+      <h2>Keterampilan dasar</h2>
+      <dl class="keterampilan galeri">
+        <div class="kartu">
+          <dt class="kartu__judul">Dasar HTML</dt>
+          <dd class="kartu__isi">Membuat struktur halaman web, tabel data, dan formulir input sederhana.</dd>
+        </div>
+        <div class="kartu">
+          <dt class="kartu__judul">Dasar CSS</dt>
+          <dd class="kartu__isi">Mengatur warna, font, dan tata letak tampilan web menggunakan Flexbox.</dd>
+        </div>
+        <div class="kartu">
+          <dt class="kartu__judul">Perkakas Belajar</dt>
+          <dd class="kartu__isi">Menggunakan VS Code untuk menulis kode dan Git dasar untuk menyimpan tugas kuliah.</dd>
+        </div>
+      </dl>
+    </section>
+
+    </main>
+
+    <footer class="kaki">
+      <!-- ISI 9 — nama, NIM, tahun. -->
+      <p>Adnan Hanif Riandito · 25523126 · <time datetime="2026">2026</time></p>
+    </footer>
+  </div>
+</body>
+</html>
