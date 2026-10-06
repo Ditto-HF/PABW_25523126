@@ -50,3 +50,4 @@ const katalog = daftarProyek.find((proyek) => proyek.judul === "Katalog Produk")
 console.log(katalog);
 
 
+
