@@ -50,4 +50,14 @@ const katalog = daftarProyek.find((proyek) => proyek.judul === "Katalog Produk")
 console.log(katalog);
 
 
+//galat check
+console.log(profil);
+console.table(daftarProyek);
+console.log(profil.karya);
+//console.error(pesan);
 
+const profilSalinanSalah = profil;
+
+profilSalinanSalah.nama = "Saya";
+
+console.table(profil);
