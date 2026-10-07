@@ -13,7 +13,7 @@ const profil = {
   karya: ["Warmis", "Stress Shield"],
 };
 
-const daftarProyek = [  
+export const daftarProyek = [  
   { judul: "Stress Shield", tahun: 2025, selesai: true },
   { judul: "WarMis", tahun: 2026, selesai: true },
   { judul: "KisahSiKecil", tahun: 2026, selesai: false },
@@ -56,10 +56,8 @@ console.table(daftarProyek);
 console.log(profil.karya);
 //console.error(pesan);
 
-const profilSalinanSalah = profil;
+// const profilSalinanSalah = profil;
 
-profilSalinanSalah.nama = "Saya";
+// profilSalinanSalah.nama = "Saya";
 
-console.table(profil);
 
- 
