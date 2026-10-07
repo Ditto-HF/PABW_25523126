@@ -1,0 +1,68 @@
+/* LAPIS 1 — primitif: nilai mentah, tidak menyebut peran apa pun */
+
+:root {
+
+  /* Hijau Mint Pastel (Hijau segar & tegas, tetap soft) */
+  --mint-50:        #D8F3DC;  /* Hijau pastel lembut untuk background */
+  --mint-100:       #B7E4C7;  /* Pastel hijau mint yang jelas & hidup */
+  --mint-200:       #95D5B2;  /* Pastel hijau sedang (untuk border/hover) */
+  --mint-500:       #52B788;  /* Aksen hijau mint utama */
+
+  /* Biru (Pastel Sky & Calm Blue) */
+  --blue-100:       #E3EEF8;
+  --blue-200:       #B2D4F0;
+  --blue-400:       #5B8FB9;
+  --blue-700:       #2A425B;
+
+  /* Ungu (Soft Lavender & Twilight) */
+  --lavender-100:   #F3EFF8;
+  --lavender-200:   #E0D5ED;
+  --violet-900:     #2B2335;
+
+  /* Aksen Bahaya (Soft Rose) */
+  --rose-400:       #E07A5F;
+
+/* DARK MODE*/
+  --gray-900:       #121826;
+  --slate-500:      #64748B;
+  --slate-200:      #E2E8F0;
+  --navy-900:       #0B1120;
+  --navy-700:       #1E293B;
+  --teal-400:       #2DD4BF;
+  --amber-400:      #FBBF24;
+  --red-400:        #FF8A8A;
+  
+  --red-600:        #C0392B; 
+ 
+  --text-sm:        0.875rem; 
+  --text-md:        1rem;    
+  --text-xl:        1.5rem;   
+  --text-3xl:       2.25rem; 
+
+ 
+  --space-1:        0.25rem;  
+  --space-2:        0.5rem;   
+  --space-3:        0.75rem; 
+  --space-4:        1rem;     
+  --space-6:        1.5rem;   
+
+ 
+  --radius-md:      0.75rem;  
+  --radius-full:    99rem;
+  --shadow-1:       0 0.25rem 0.75rem rgba(42, 36, 56, 0.08);
+}
+
+/* LAPIS 2 — semantik: peran. Isinya mengacu ke lapis 1. */
+:root {
+  --color-bg:         var(--mint-50);  /* Jika ingin latar belakang full hijau pastel, ganti ke var(--mint-100) */
+  --color-fg:         var(--violet-900);
+  --color-surface:    #FFFFFF;
+  --color-border:     var(--mint-200); /* Border hijau mint terlihat tegas & rapi */
+  --color-primary:    var(--blue-400);
+  --color-on-primary: #FFFFFF;
+  --color-danger:     var(--rose-400);
+  --color-focus:      var(--blue-400);
+
+  --card-pad:         var(--space-4);
+  --section-gap:      var(--space-6);
+}

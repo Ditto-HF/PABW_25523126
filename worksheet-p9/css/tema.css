@@ -1,0 +1,45 @@
+/* Pengalih Manual */
+.pengalih-tema {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tombol-tema {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--color-fg);
+}
+
+/* Ikut pengaturan sistem: lapis semantik saja yang diganti */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:         var(--gray-900);
+    --color-fg:         var(--slate-200);
+    --color-surface:    var(--navy-700);
+    --color-border:     var(--slate-500);
+    --color-primary:    var(--teal-400);
+    --color-on-primary: var(--navy-900); /* Teks di atas warna primary terang */
+    --color-danger:     var(--rose-400);
+    --color-focus:      var(--amber-400);
+    --shadow-1:         var(--shadow-1);
+  }
+}
+
+
+/* 2. Overide Manual Lewat Tombol Checkbox (Wajib Ditulis Sesudah Media Query) */
+:root:has(#tema:checked) {
+    --color-bg:         var(--gray-900);
+    --color-fg:         var(--slate-200);
+    --color-surface:    var(--navy-700);
+    --color-border:     var(--slate-500);
+    --color-primary:    var(--teal-400);
+    --color-on-primary: var(--navy-900); /* Teks di atas warna primary terang */
+    --color-danger:     var(--rose-400);
+    --color-focus:      var(--amber-400);
+    --shadow-1:         var(--shadow-1);
+  }
