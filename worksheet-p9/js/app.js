@@ -14,9 +14,9 @@ const profil = {
 };
 
 export const daftarProyek = [  
-  { judul: "Stress Shield", tahun: 2025, selesai: true },
-  { judul: "WarMis", tahun: 2026, selesai: true },
-  { judul: "KisahSiKecil", tahun: 2026, selesai: false },
+  { judul: "Stress Shield", tahun: 2025, selesai: true, kategori: "semua" },
+  { judul: "WarMis", tahun: 2026, selesai: true, kategori: "data" },
+  { judul: "KisahSiKecil", tahun: 2026, selesai: false, kategori: "web" },
 ];
 
 

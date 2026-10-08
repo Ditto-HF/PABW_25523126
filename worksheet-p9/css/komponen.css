@@ -145,3 +145,14 @@ dl.keterampilan dd {
   min-height: 14rem;
 }
 
+
+.aktif {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+function tandaiTombolAktif(tombolAktif) {
+  document.querySelectorAll("#filter button").forEach((tombol) => {
+    tombol.classList.toggle("aktif", tombol === tombolAktif);
+  });
+}
+
