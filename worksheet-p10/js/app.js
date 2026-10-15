@@ -1,3 +1,5 @@
+import { ambilNotisia } from "./api";
+
 const nama = "Ayu";           // teks
 const jumlahProyek = 3;       // angka, bukan "3"
 let pilihanAktif = "semua";   // akan berubah saat disaring
@@ -60,4 +62,5 @@ console.log(profil.karya);
 
 // profilSalinanSalah.nama = "Saya";
 
+ambilNotisia();
 
