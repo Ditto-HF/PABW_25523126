@@ -15,17 +15,7 @@ daftarProyek.forEach((proyek) => wadah.append(buatKartu(proyek)));
 
 const barisFilter = document.querySelector("#filter");
 
-barisFilter.addEventListener("click", (event) => {
-  const tombol = event.target.closest("button");
-  if (!tombol) return;                 // klik di luar tombol, abaikan
 
-  const kategori = tombol.dataset.kategori;
-  const terpilih = daftarProyek.filter(
-    (proyek) => kategori === "semua" || proyek.kategori === kategori
-  );
-
-  render(terpilih);
-});
 
 function render(daftar) {
   wadah.textContent = "";                 // 1. kosongkan lebih dulu
@@ -44,3 +34,16 @@ function tandaiTombolAktif(tombolAktif) {
     tombol.classList.toggle("aktif", tombol === tombolAktif);
   });
 }
+
+barisFilter.addEventListener("click", (event) => {
+  const tombol = event.target.closest("button");
+  if (!tombol) return;                 // klik di luar tombol, abaikan
+
+  const kategori = tombol.dataset.kategori;
+  const terpilih = daftarProyek.filter(
+    (proyek) => kategori === "semua" || proyek.kategori === kategori
+  );
+
+  render(terpilih);
+  tandaiTombolAktif(tombol);
+});

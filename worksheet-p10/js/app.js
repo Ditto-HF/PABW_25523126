@@ -1,7 +1,4 @@
-import { ambilNotisia } from "./api";
 
-const nama = "Ayu";           // teks
-const jumlahProyek = 3;       // angka, bukan "3"
 let pilihanAktif = "semua";   // akan berubah saat disaring
 
 console.log(typeof nama);          // "string"
@@ -13,6 +10,7 @@ const profil = {
   peran: "Mahasiswa Informatika",
   keahlian: ["Dasar HTML", "Dasar CSS", "JavaScript"],
   karya: ["Warmis", "Stress Shield"],
+  jumlahProyek: 3,
 };
 
 export const daftarProyek = [  
@@ -62,5 +60,35 @@ console.log(profil.karya);
 
 // profilSalinanSalah.nama = "Saya";
 
-ambilNotisia();
+import { ambilNotisia } from './api.js';
+
+const wadah = document.querySelector('#daftar');
+
+function gambar(daftar) {
+  wadah.textContent = '';
+  daftar.forEach(function (n) {
+    const kartu = document.createElement('article');
+    const judul = document.createElement('h3');
+    judul.textContent = n.titulu;
+    kartu.appendChild(judul);
+    wadah.appendChild(kartu);
+  });
+}
+
+async function tampilkan() {
+  wadah.textContent = 'Memuat...';
+  try {
+    const daftar = await ambilNotisia();
+    if (daftar.length === 0) {
+      wadah.textContent = 'Belum ada notisia';
+      return;
+    }
+    gambar(daftar);
+  } catch (galat) {
+    wadah.textContent = 'Gagal memuat data: ' + galat.message;
+  }
+}
+
+tampilkan();
+
 

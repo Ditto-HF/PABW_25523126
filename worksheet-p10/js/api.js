@@ -1,4 +1,4 @@
-const ALAMAT = 'https://jsonplaceholder.typicode.com/todoss';
+const ALAMAT = 'https://jsonplaceholder.typicode.com/todos';
 
 // async function muat() {
 //   const respons = await fetch(ALAMAT);
@@ -22,3 +22,6 @@ export async function ambilNotisia() {
     throw galat;
   }
 }
+
+
+
